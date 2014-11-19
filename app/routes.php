@@ -15,3 +15,10 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+// https://api.dosomething.org/1/ 
+Route::group(array('prefix' => '1'), function()
+{
+	Route::resource('users', 'UserController');  	   
+});
+
